@@ -1,0 +1,16 @@
+-- Create a database
+CREATE DATABASE hodlinfo;
+
+-- Connect to the database
+\c hodlinfo;
+
+-- Create a table to store crypto data
+CREATE TABLE crypto_data (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(50) NOT NULL,
+  last NUMERIC NOT NULL,
+  buy NUMERIC NOT NULL,
+  sell NUMERIC NOT NULL,
+  volume NUMERIC NOT NULL,
+  base_unit VARCHAR(10) NOT NULL
+);
